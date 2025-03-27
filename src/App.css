@@ -1,3 +1,4 @@
+
 * {
   margin: 0px;
   border: 0px;
@@ -6,7 +7,6 @@
 
 header {
   display: flex;
-  position: absolute;
   padding: 0px;
   width: 100vw;
   height: 12.5rem;
@@ -16,6 +16,70 @@ header {
   justify-content: center;
 }
 
+body {
+  background-color: var(--gray-600);
+}
+
 .logo {
   width: 5.875rem;
+}
+
+.input-field {
+  display: flex;
+  justify-content: center;
+  margin-top: -35px;
+  padding: 16px;
+
+}
+
+.input-shape {
+  background: var(--gray-500);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.input-field input {
+  width: 32rem;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--gray-100);
+}
+
+.input-field input::placeholder {
+  color: var(--gray-300);
+}
+
+.input-field button {
+  margin-left: 10px;
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  width: 5rem;
+  border-radius: 8px;
+
+  transition: 0.2s;
+}
+
+.input-field button:hover {
+  background: var(--blue);
+  cursor: pointer;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+}
+
+.stats {
+  width: 38.625rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray-100)
+}
+
+.counter {
+  margin-left: 10px;
+  background: var(--gray-400);
+  padding: 0 10px;
+  border-radius: 999px;
 }
