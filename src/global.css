@@ -14,3 +14,7 @@
 
     --danger: #E25858;
 }
+
+body {
+    font-family: 'Inter', sans-serif;
+}

@@ -1,3 +1,4 @@
+import "./global.css";
 
 * {
   margin: 0px;
@@ -5,11 +6,15 @@
   box-sizing: border-box;
 }
 
+p {
+  margin: 0px;
+}
+
 header {
   display: flex;
   padding: 0px;
   width: 100vw;
-  height: 12.5rem;
+  height: 10.5rem;
   margin-top: 0px;
   background: #111;
   text-align: center;
@@ -74,12 +79,57 @@ body {
   width: 38.625rem;
   display: flex;
   justify-content: space-between;
-  color: var(--gray-100)
+  color: var(--gray-100);
+  margin-top: 3rem;
+}
+
+.created, .completed p {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.created {
+  color: var(--blue);
+}
+
+.completed {
+  color: var(--purple);
 }
 
 .counter {
+  color: var(--gray-100);
   margin-left: 10px;
   background: var(--gray-400);
   padding: 0 10px;
   border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.main-message {
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--gray-300);
+  line-height: 1.4;
+}
+
+.message {
+  font-size: 1rem;
+  color: var(--gray-300);
+  line-height: 1.4;
+}
+
+.no-tasks-display {
+  stroke: 10px;
+  text-align: center;
+}
+
+.line {
+  height: 0.1px;
+  width: 40rem;
+  background: var(--gray-400);
+  text-align: center;
+  margin: 1.3rem auto;
+  margin-bottom: 5rem;
 }
