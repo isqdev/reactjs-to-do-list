@@ -1,5 +1,9 @@
 import { useState } from "react";
 import "./App.css";
+import { EmptyView } from "./components/EmptyView";
+import { Stats } from "./components/Stats";
+import { Input } from "./components/Input";
+import { Header } from "./components/Header";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -7,40 +11,15 @@ function App() {
   return (
     <>
       <body className="container">
-          <header className="banner-background">
-            <img
-              src="src\assets\Logo.svg"
-              alt="logo do todo"
-              className="logo"
-            />
-          </header>
-          <div className="input-field">
-            <div className="input-shape">
-              <input type="text" placeholder="Adicione uma nova tarefa" />
-            </div>
-            <button>Criar</button>
-          </div>
-          <div className="stats-container">
-            <div className="stats">
-              <div className="created">
-                <p>
-                  Tarefas criadas<span className="counter">{0}</span>
-                </p>
-              </div>
-              <div className="completed">
-                <p>
-                  Concluídas<span className="counter">{0}</span>
-                </p>
-              </div>
-
-            </div>
-          </div>
-          <div className="no-tasks-display">
-              <div className="line"></div>  
-              <img src="src\assets\Clipboard.svg" alt="empty list" />
-              <p className="main-message">Você ainda não tem tarefas cadastradas</p>
-              <p className="message">Crie tarefas e organize seus itens a fazer</p>
-          </div>
+        <Header />
+        <Input />
+        <Stats />
+        <EmptyView/>
+        <div className="task input-shape">
+          <input type="checkbox" className="checkbox"/>
+          <textarea placeholder="Digite aqui..." className="task-input input-shape"></textarea>
+          <img src="src\assets\trash.svg" alt="" />
+        </div>
       </body>
     </>
   );

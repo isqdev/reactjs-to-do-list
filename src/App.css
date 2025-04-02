@@ -23,6 +23,15 @@ header {
 
 body {
   background-color: var(--gray-600);
+  text-align: center;
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--gray-100);
+  margin: 0;
 }
 
 .logo {
@@ -45,10 +54,6 @@ body {
 
 .input-field input {
   width: 32rem;
-  background: none;
-  border: none;
-  outline: none;
-  color: var(--gray-100);
 }
 
 .input-field input::placeholder {
@@ -81,6 +86,7 @@ body {
   justify-content: space-between;
   color: var(--gray-100);
   margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .created, .completed p {
@@ -120,16 +126,44 @@ body {
   line-height: 1.4;
 }
 
-.no-tasks-display {
-  stroke: 10px;
-  text-align: center;
+.hidden {
+  display: none;
 }
 
 .line {
   height: 0.1px;
   width: 40rem;
   background: var(--gray-400);
-  text-align: center;
-  margin: 1.3rem auto;
+  margin: 0 auto;
   margin-bottom: 5rem;
+}
+
+.task {
+  /* display: inline-block; */
+  margin: 0 auto;
+  width: 38rem;
+  padding-top: 1rem;
+  justify-between: space-between;
+}
+
+textarea {
+  width: 30rem;
+  font-size: 14px;
+  padding: 0px 0.7rem
+}
+
+.checkbox {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #555;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox:checked {
+  color: white;
+  font-size: 16px;
+  background: var(--purple);
 }
